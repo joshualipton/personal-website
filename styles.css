@@ -10,27 +10,32 @@
 }
 
 body {
-  background: rgb(7, 11, 52);
-  /* background: linear-gradient(
-    180deg,
-    rgba(7, 11, 52, 1) 0%,
-    rgb(33, 38, 105) 50%,
-    rgb(47, 51, 121) 100%,
-  ); */
+  background: #070b34;
   background: linear-gradient(
+    180deg,
+    #070B34,
+    #0D2E56,
+    #135178,
+    #19749A,
+    #1F96BB,
+    #25B9DD,
+    #2BDCFF
+  );
+  /* background: linear-gradient(
     180deg,
     #070b34 0%,
     #141852 30%,
     #2b2f77 50%,
     #483475 70%,
     #6b4984 100%
-  );
+  ); */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   --body-color: #f1ecff;
+  --body-color-dark: #070b34;
   color: var(--body-color);
   --body-font: "Inter", sans-serif;
   font-family: var(--body-font);
@@ -66,8 +71,8 @@ header {
 
 .header-links a:hover,
 .header-links a.active {
-  background: white;
-  color: black;
+  background: var(--body-color);
+  color: var(--body-color-dark);
 }
 
 a#logo {
@@ -160,51 +165,82 @@ img#astronaut {
 }
 
 .about-me-bottom {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 66vw;
-    gap: 1vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 66vw;
+  gap: 1vh;
 }
 
 .about-me img {
-    width: 18vw;
-    height: auto;
-    border-radius: 10vw;
-    border: #00C895;
-    border-style: solid;
-    border-width: 7px;
+  width: 18vw;
+  height: auto;
+  border-radius: 10vw;
+  border: #f1ecff;
+  border-style: solid;
+  border-width: 7px;
 }
 
 .about-me-title {
-    font-size: 32px;
+  font-size: 32px;
 }
 
 .about-me-text {
-    text-align: center;
-    width: 38vw;
+  text-align: center;
+  width: 38vw;
 }
 
 span#work-title {
-
+  font-size: 32px;
 }
 
 .work-experience {
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 66vw;
+  gap: 5vh;
+  margin-top: 20vh;
 }
 
 .work-left {
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .work-right {
-
+  width: 38vw;
 }
 
 .jobs {
-
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 17vh;
 }
 
 .job {
-    
+  text-decoration: none;
+  padding: 6px 15px;
+  cursor: pointer;
+  width: 15vw;
+}
+
+.job:hover,
+.job.active {
+  background: var(--body-color);
+  color: var(--body-color-dark);
+  -webkit-transition: background-color 300ms linear;
+  -ms-transition: background-color 300ms linear;
+  transition: background-color 300ms linear;
+}
+
+.work-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2vw;
 }

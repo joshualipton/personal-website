@@ -55,15 +55,37 @@
       </div>
     </div>
     <div id="work" class="work-experience">
-        <span id="work-title">Work Experience</span>
+      <span id="work-title">Work Experience</span>
+      <div class="work-container">
         <div class="work-left">
-            <ul class="jobs">
-                <li class="job">Amazon</li>
-                <li class="job">Commit The Change</li>
-                <li class="job">Terra Seco Solutions</li>
-            </ul>
+          <ul class="jobs">
+            <li
+              class="job active"
+              onclick="changeText('Amazon Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, excepturi nisi illo incidunt dignissimos quidem Odit voluptatibus, dolorum, deserunt, omnis placeat commodi minus doloremque veritatis dolores corporis aliquam maxime itaque')"
+            >
+              Amazon
+            </li>
+            <li
+              class="job"
+              onclick="changeText('CTC Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, excepturi nisi illo incidunt dignissimos quidem Odit voluptatibus, dolorum, deserunt, omnis placeat commodi minus doloremque veritatis dolores corporis aliquam maxime itaque')"
+            >
+              Commit The Change
+            </li>
+            <li
+              class="job"
+              onclick="changeText('Terra Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, excepturi nisi illo incidunt dignissimos quidem Odit voluptatibus, dolorum, deserunt, omnis placeat commodi minus doloremque veritatis dolores corporis aliquam maxime itaque')"
+            >
+              Terra Seco Solutions
+            </li>
+          </ul>
         </div>
-        <div class="work-right"></div>
+        <div id="job-text" class="work-right">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero modi
+          iste, quisquam beatae, sunt voluptas deleniti enim deserunt officia,
+          blanditiis dolorem atque quasi voluptatum totam harum molestiae iusto?
+          Ad, recusandae!
+        </div>
+      </div>
     </div>
 
     <script>
@@ -76,6 +98,21 @@
         astronaut.style.right = (value + 500) * 0.5 + "px";
         astronaut.style.rotate = value * 0.25 + "deg";
       });
+
+      const callToActionBtns = document.querySelectorAll(".job");
+
+      callToActionBtns.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          callToActionBtns.forEach((f) =>
+            f != e.target ? f.classList.remove("active") : ""
+          );
+          e.target.classList.toggle("active");
+        });
+      });
+
+      const changeText = (text) => {
+        document.getElementById("job-text").innerHTML = text;
+      };
     </script>
   </body>
 </html>
