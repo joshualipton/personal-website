@@ -14,34 +14,68 @@
     <title>Joshua Lipton</title>
   </head>
   <body>
-    <!-- <div class="introduction">
-      <div class="introduction-text">
-        <h2 class="introduction-my-name-is">Hi, my name is</h2>
-        <h1 class="introduction-name">Joshua Lipton</h1>
-        <h3 class="introduction-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-          voluptate. Doloribus aut sed temporibus aperiam rem, ratione aliquam
-          modi quidem sunt voluptatum, quia distinctio dolorem a harum
-          voluptatem fugit nihil?
-        </h3>
-      </div>
-      <img src="img/joshlipton.jpg" alt="Joshua Lipton Picture" class="introduction-picture"/>
-    </div> -->
     <header>
-      <a href="#" id="logo">Joshua Lipton</a>
+      <a href="#" id="logo">Josh Lipton</a>
       <div class="header-links">
         <a href="#" class="active">Home</a>
-        <a href="#">About</a>
-        <a href="#">Work</a>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
         <a href="#">Projects</a>
         <a href="#">Resume</a>
       </div>
     </header>
     <div class="introduction">
-      <img src="img/stars.png" alt="stars" />
+      <img id="stars" src="img/stars.png" alt="stars" />
       <img id="moon" src="img/moon.png" alt="moon" />
-      <span id="hey">Hey, I'm</span>
-      <span id="name">Joshua Lipton</span>
+      <div class="introduction-container">
+        <span id="hey">Hey, I'm</span>
+        <span id="name">Josh Lipton</span>
+        <p id="description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+          repellendus molestiae odit ut est ad laborum ratione provident cumque,
+          unde, libero excepturi, eligendi veritatis nostrum eaque asperiores
+          similique recusandae soluta.
+        </p>
+        <button id="explore">Explore</button>
+      </div>
     </div>
+    <img id="astronaut" src="img/astronaut.png" alt="astronaut" />
+    <div id="about" class="about-me">
+      <span class="about-me-title">About Me</span>
+      <div class="about-me-bottom">
+        <span class="about-me-text"
+          >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus,
+          excepturi nisi illo incidunt dignissimos quidem? Odit voluptatibus,
+          dolorum, deserunt, omnis placeat commodi minus doloremque veritatis
+          dolores corporis aliquam maxime itaque? Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Eius excepturi quibusdam necessitatibus
+          veniam impedit, provident ad odio debitis ratione vitae eum sunt
+          officia perferendis, ullam qui repellendus enim at cumque.</span
+        ><img src="img/joshlipton.jpg" alt="Joshua Lipton" />
+      </div>
+    </div>
+    <div id="work" class="work-experience">
+        <span id="work-title">Work Experience</span>
+        <div class="work-left">
+            <ul class="jobs">
+                <li class="job">Amazon</li>
+                <li class="job">Commit The Change</li>
+                <li class="job">Terra Seco Solutions</li>
+            </ul>
+        </div>
+        <div class="work-right"></div>
+    </div>
+
+    <script>
+      let stars = document.getElementById("stars");
+      let astronaut = document.getElementById("astronaut");
+
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + "px";
+        astronaut.style.right = (value + 500) * 0.5 + "px";
+        astronaut.style.rotate = value * 0.25 + "deg";
+      });
+    </script>
   </body>
 </html>
