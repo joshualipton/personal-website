@@ -54,6 +54,9 @@
         ><img src="img/joshlipton.jpg" alt="Joshua Lipton" />
       </div>
     </div>
+    <img id="cloud" src="img/cloud.png" alt="cloud">
+    <img id="cloud1" src="img/cloud.png" alt="cloud">
+    <img id="cloud2" src="img/cloud.png" alt="cloud">
     <div id="work" class="work-experience">
       <span id="work-title">Work Experience</span>
       <div class="work-container">
@@ -87,16 +90,23 @@
         </div>
       </div>
     </div>
+    <div class="projects"></div>
 
     <script>
       let stars = document.getElementById("stars");
       let astronaut = document.getElementById("astronaut");
+      let cloud = document.getElementById("cloud");
+      let cloud1 = document.getElementById("cloud1");
+      let cloud2 = document.getElementById("cloud2");
 
       window.addEventListener("scroll", function () {
         let value = window.scrollY;
-        stars.style.left = value * 0.25 + "px";
-        astronaut.style.right = (value + 500) * 0.5 + "px";
-        astronaut.style.rotate = value * 0.25 + "deg";
+        stars.style.left = (value) * 0.25 + "px";
+        cloud.style.left = (value) * 0.5 + "px";
+        cloud1.style.left = (value) * 0.5 + "px";
+        cloud2.style.left = (value) * 0.5 + "px";
+        astronaut.style.right = (value) * 0.5 + "px";
+        astronaut.style.rotate = (value) * 0.25 + "deg";
       });
 
       const callToActionBtns = document.querySelectorAll(".job");
