@@ -21,7 +21,11 @@
         <a onclick="scrollToElement('about')">About</a>
         <a onclick="scrollToElement('work')">Work</a>
         <a onClick="scrollToElement('projects')">Projects</a>
-        <a href="C:\Users\jalip\OneDrive\Documents\Resume\Joshua Lipton Resume Fall 2022.pdf" target="_blank">Resume</a>
+        <a
+          href="C:\Users\jalip\OneDrive\Documents\Resume\Joshua Lipton Resume Fall 2022.pdf"
+          target="_blank"
+          >Resume</a
+        >
       </div>
     </header>
     <div id="home" class="introduction">
@@ -64,49 +68,57 @@
           <ul class="jobs">
             <li
               class="job active"
-              onclick="changeText('Amazon Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, excepturi nisi illo incidunt dignissimos quidem Odit voluptatibus, dolorum, deserunt, omnis placeat commodi minus doloremque veritatis dolores corporis aliquam maxime itaque')"
+              onclick="changeJobText('Amazon Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, excepturi nisi illo incidunt dignissimos quidem Odit voluptatibus, dolorum, deserunt, omnis placeat commodi minus doloremque veritatis dolores corporis aliquam maxime itaque'), 
+                       changeJobTitle('Software Development Engineer Intern')"
             >
               Amazon
             </li>
             <li
               class="job"
-              onclick="changeText('CTC Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, excepturi nisi illo incidunt dignissimos quidem Odit voluptatibus, dolorum, deserunt, omnis placeat commodi minus doloremque veritatis dolores corporis aliquam maxime itaque')"
+              onclick="changeJobText('CTC Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, excepturi nisi illo incidunt dignissimos quidem Odit voluptatibus, dolorum, deserunt, omnis placeat commodi minus doloremque veritatis dolores corporis aliquam maxime itaque'),
+                       changeJobTitle('Full Stack Developer')"
             >
               Commit The Change
             </li>
             <li
               class="job"
-              onclick="changeText('Terra Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, excepturi nisi illo incidunt dignissimos quidem Odit voluptatibus, dolorum, deserunt, omnis placeat commodi minus doloremque veritatis dolores corporis aliquam maxime itaque')"
+              onclick="changeJobText('Terra Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, excepturi nisi illo incidunt dignissimos quidem Odit voluptatibus, dolorum, deserunt, omnis placeat commodi minus doloremque veritatis dolores corporis aliquam maxime itaque', 'Full Stack Developer'),
+                       changeJobTitle('Software Engineer Intern')"
             >
               Terra Seco Solutions
             </li>
           </ul>
         </div>
-        <div id="job-text" class="work-right">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero modi
-          iste, quisquam beatae, sunt voluptas deleniti enim deserunt officia,
-          blanditiis dolorem atque quasi voluptatum totam harum molestiae iusto?
-          Ad, recusandae!
+        <div class="work-right">
+          <div id="job-title" class="work-right">
+            Software Development Engineer Intern
+          </div>
+          <div id="job-text" class="work-right">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
+            modi iste, quisquam beatae, sunt voluptas deleniti enim deserunt
+            officia, blanditiis dolorem atque quasi voluptatum totam harum
+            molestiae iusto? Ad, recusandae!
+          </div>
         </div>
       </div>
     </div>
     <div class="container">
       <div class="bird-container bird-container--one">
-          <div id="bird" class="bird bird--one"></div>
+        <div id="bird" class="bird bird--one"></div>
       </div>
-  
+
       <div class="bird-container bird-container--two">
-          <div id="bird1" class="bird bird--two"></div>
+        <div id="bird1" class="bird bird--two"></div>
       </div>
-  
+
       <div class="bird-container bird-container--three">
-          <div id="bird2" class="bird bird--three"></div>
+        <div id="bird2" class="bird bird--three"></div>
       </div>
-  
+
       <div class="bird-container bird-container--four">
-          <div id="bird3" class="bird bird--four"></div>
+        <div id="bird3" class="bird bird--four"></div>
       </div>
-  </div>
+    </div>
     <div id="projects" class="projects">
       <span id="projects-title">Projects</span>
       <div class="project-containers">
@@ -119,10 +131,17 @@
             Doloribus natus illum sit atque?
           </span>
           <span class="project-languages">Python Django</span>
-          <button class="project-view-button" onclick="window.open('https://www.youtube.com/watch?v=rN3m2eAzhJ4&embeds_euri=https%3A%2F%2Fantrepreneur.uci.edu%2F&feature=emb_logo&ab_channel=GROUPAntrepreneurCenter')">View</button>
+          <button
+            class="project-view-button"
+            onclick="window.open('https://www.youtube.com/watch?v=rN3m2eAzhJ4&embeds_euri=https%3A%2F%2Fantrepreneur.uci.edu%2F&feature=emb_logo&ab_channel=GROUPAntrepreneurCenter')"
+          >
+            View
+          </button>
         </div>
         <div class="project-container">
-          <span id="web-scraper" class="project-name">Pediatric Web Scraper</span>
+          <span id="web-scraper" class="project-name"
+            >Pediatric Web Scraper</span
+          >
           <span class="project-descripion">
             Bonsai Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Exercitationem similique odit velit, dolor iusto minus facilis,
@@ -130,19 +149,29 @@
             Doloribus natus illum sit atque?
           </span>
           <span class="project-languages">Python Django</span>
-          <button class="project-view-button" onclick="window.open('https://github.com/joshualipton/Online-Ratings-and-Perceptions-of-Pediatric-Otolaryngologists')">View</button>
+          <button
+            class="project-view-button"
+            onclick="window.open('https://github.com/joshualipton/Online-Ratings-and-Perceptions-of-Pediatric-Otolaryngologists')"
+          >
+            View
+          </button>
         </div>
         <div class="project-container">
-            <span class="project-name">Where To Feast</span>
-            <span class="project-descripion">
-              Bonsai Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Exercitationem similique odit velit, dolor iusto minus facilis,
-              dicta unde aspernatur accusantium ducimus porro sequi, quaerat in!
-              Doloribus natus illum sit atque?
-            </span>
-            <span class="project-languages">Python Django</span>
-            <button class="project-view-button" onclick="window.open('https://github.com/joshualipton/Where-To-Feast-Button')">View</button>
-          </div>
+          <span class="project-name">Where To Feast</span>
+          <span class="project-descripion">
+            Bonsai Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Exercitationem similique odit velit, dolor iusto minus facilis,
+            dicta unde aspernatur accusantium ducimus porro sequi, quaerat in!
+            Doloribus natus illum sit atque?
+          </span>
+          <span class="project-languages">Python Django</span>
+          <button
+            class="project-view-button"
+            onclick="window.open('https://github.com/joshualipton/Where-To-Feast-Button')"
+          >
+            View
+          </button>
+        </div>
       </div>
       <div id="designed">Designed & Built by Joshua Lipton</div>
     </div>
@@ -183,8 +212,12 @@
         });
       });
 
-      const changeText = (text) => {
+      const changeJobText = (text) => {
         document.getElementById("job-text").innerHTML = text;
+      };
+
+      const changeJobTitle = (text) => {
+        document.getElementById("job-title").innerHTML = text;
       };
 
       const scrollToElement = (elementId) => {
@@ -240,9 +273,6 @@
 
         window.addEventListener("scroll", checkScroll);
       })();
-
-      document.getElementById("open-pdf-button").addEventListener("click", openPDF);
-
     </script>
   </body>
 </html>
