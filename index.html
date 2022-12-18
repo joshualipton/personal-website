@@ -212,6 +212,44 @@
         });
       });
 
+      // const headerButtons = document.querySelectorAll(".header-links a");
+
+      // headerButtons.forEach((btn) => {
+      //   btn.addEventListener("click", (e) => {
+      //     headerButtons.forEach((f) => f.classList.remove("active"));
+      //     e.target.classList.add("active");
+      //   });
+      // });
+
+      const elementsToObserve = document.querySelectorAll(
+        "#home, #about, #work, #projects"
+      );
+      const headerButtons = document.querySelectorAll(".header-links a");
+
+      const callback = (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            headerButtons.forEach((button) =>
+              button.classList.remove("active")
+            );
+            const buttonId = entry.target.id;
+            const activeButton = document.querySelector(
+              `.header-links a[onclick="scrollToElement('${buttonId}')"]`
+            );
+            activeButton.classList.add("active");
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(callback, {
+        rootMargin: "5% 0%",
+        threshold: 0.75,
+      });
+
+      elementsToObserve.forEach((element) => {
+        observer.observe(element);
+      });
+
       const changeJobText = (text) => {
         document.getElementById("job-text").innerHTML = text;
       };

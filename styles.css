@@ -205,6 +205,7 @@ span#work-title {
   width: 66vw;
   gap: 5vh;
   margin-top: 20vh;
+  margin-bottom: 20vh;
 }
 
 .work-left {
@@ -496,7 +497,7 @@ img#astronaut {
 
 .bird-container {
   position: absolute;
-  top: 230%;
+  top: 240%;
   left: -10%;
   -webkit-transform: scale(0) translateX(-10vw);
   transform: scale(0) translateX(-10vw);
