@@ -20,8 +20,8 @@
         <a onclick="scrollToElement('home')" class="active">Home</a>
         <a onclick="scrollToElement('about')">About</a>
         <a onclick="scrollToElement('work')">Work</a>
-        <a href="#">Projects</a>
-        <a href="#">Resume</a>
+        <a onClick="scrollToElement('projects')">Projects</a>
+        <a href="C:\Users\jalip\OneDrive\Documents\Resume\Joshua Lipton Resume Fall 2022.pdf" target="_blank">Resume</a>
       </div>
     </header>
     <div id="home" class="introduction">
@@ -90,7 +90,62 @@
         </div>
       </div>
     </div>
-    <div class="projects"></div>
+    <div class="container">
+      <div class="bird-container bird-container--one">
+          <div id="bird" class="bird bird--one"></div>
+      </div>
+  
+      <div class="bird-container bird-container--two">
+          <div id="bird1" class="bird bird--two"></div>
+      </div>
+  
+      <div class="bird-container bird-container--three">
+          <div id="bird2" class="bird bird--three"></div>
+      </div>
+  
+      <div class="bird-container bird-container--four">
+          <div id="bird3" class="bird bird--four"></div>
+      </div>
+  </div>
+    <div id="projects" class="projects">
+      <span id="projects-title">Projects</span>
+      <div class="project-containers">
+        <div class="project-container">
+          <span class="project-name">Bonsai</span>
+          <span class="project-descripion">
+            Bonsai Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Exercitationem similique odit velit, dolor iusto minus facilis,
+            dicta unde aspernatur accusantium ducimus porro sequi, quaerat in!
+            Doloribus natus illum sit atque?
+          </span>
+          <span class="project-languages">Python Django</span>
+          <button class="project-view-button" onclick="window.open('https://www.youtube.com/watch?v=rN3m2eAzhJ4&embeds_euri=https%3A%2F%2Fantrepreneur.uci.edu%2F&feature=emb_logo&ab_channel=GROUPAntrepreneurCenter')">View</button>
+        </div>
+        <div class="project-container">
+          <span id="web-scraper" class="project-name">Pediatric Web Scraper</span>
+          <span class="project-descripion">
+            Bonsai Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Exercitationem similique odit velit, dolor iusto minus facilis,
+            dicta unde aspernatur accusantium ducimus porro sequi, quaerat in!
+            Doloribus natus illum sit atque?
+          </span>
+          <span class="project-languages">Python Django</span>
+          <button class="project-view-button" onclick="window.open('https://github.com/joshualipton/Online-Ratings-and-Perceptions-of-Pediatric-Otolaryngologists')">View</button>
+        </div>
+        <div class="project-container">
+            <span class="project-name">Where To Feast</span>
+            <span class="project-descripion">
+              Bonsai Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Exercitationem similique odit velit, dolor iusto minus facilis,
+              dicta unde aspernatur accusantium ducimus porro sequi, quaerat in!
+              Doloribus natus illum sit atque?
+            </span>
+            <span class="project-languages">Python Django</span>
+            <button class="project-view-button" onclick="window.open('https://github.com/joshualipton/Where-To-Feast-Button')">View</button>
+          </div>
+      </div>
+      <div id="designed">Designed & Built by Joshua Lipton</div>
+    </div>
 
     <script>
       let stars = document.getElementById("stars");
@@ -98,6 +153,10 @@
       let cloud = document.getElementById("cloud");
       let cloud1 = document.getElementById("cloud1");
       let cloud2 = document.getElementById("cloud2");
+      let bird = document.getElementById("bird");
+      let bird1 = document.getElementById("bird1");
+      let bird2 = document.getElementById("bird2");
+      let bird3 = document.getElementById("bird3");
 
       window.addEventListener("scroll", function () {
         let value = window.scrollY;
@@ -105,6 +164,10 @@
         cloud.style.left = value * 0.5 + "px";
         cloud1.style.left = value * 0.5 + "px";
         cloud2.style.left = value * 0.5 + "px";
+        bird.style.left = value * 0.5 + "px";
+        bird1.style.left = value * 0.5 + "px";
+        bird2.style.left = value * 0.5 + "px";
+        bird3.style.left = value * 0.5 + "px";
         astronaut.style.right = value * 0.5 + "px";
         astronaut.style.rotate = value * 0.25 + "deg";
       });
@@ -125,7 +188,7 @@
       };
 
       const scrollToElement = (elementId) => {
-        document.querySelector('#' + elementId).scrollIntoView({
+        document.querySelector("#" + elementId).scrollIntoView({
           behavior: "smooth",
         });
       };
@@ -177,6 +240,9 @@
 
         window.addEventListener("scroll", checkScroll);
       })();
+
+      document.getElementById("open-pdf-button").addEventListener("click", openPDF);
+
     </script>
   </body>
 </html>
